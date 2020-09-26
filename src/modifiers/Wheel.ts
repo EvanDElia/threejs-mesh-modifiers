@@ -37,7 +37,7 @@ export class Wheel extends Modifier implements IModifier {
     let vc: number = vs.length;
 
     let ms: Matrix4;
-    let mt: Matrix4;
+    let mt: Matrix4 = new Matrix4();
     if (this.turn != 0) {
       mt = Matrix4.rotationMatrix(this.steerVector.x, this.steerVector.y, this.steerVector.z, this.turn);
       let rv: Vector3 = this.rollVector.clone();

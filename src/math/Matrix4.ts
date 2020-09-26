@@ -70,7 +70,7 @@ export class Matrix4 {
     return m;
   }
 
-  public static rotationMatrix(x: number, y: number, z: number, rad: number, targetmatrix: Matrix4 = null): Matrix4 {
+  public static rotationMatrix(x: number, y: number, z: number, rad: number, targetmatrix?: Matrix4): Matrix4 {
     let m: Matrix4;
     if (!targetmatrix) m = new Matrix4();
     else m = targetmatrix;

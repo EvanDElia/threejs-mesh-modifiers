@@ -34,10 +34,10 @@ export class EventEmitter {
   }
 
   one(type: string, listener: () => any): any {
-    let args = Array.prototype.slice.call(arguments, 2);
+    let args: any[] = Array.prototype.slice.call(arguments, 2);
     let proxyListener = () => {
       this.off(type, proxyListener);
-      listener.apply(null, args);
+      // listener.apply(null, args);
     };
 
     this.on(type, proxyListener);
